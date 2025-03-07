@@ -125,22 +125,6 @@ const MessageSend = ({ chatId }) => {
 				className="w-full flex items-center gap-1 h-[7vh] p-3 bg-slate-800 text-white"
 				onSubmit={(e) => e.preventDefault()}
 			>
-				<label htmlFor="media" className="cursor-pointer">
-					<FaFolderOpen
-						title="Open File"
-						size={22}
-						className="active:scale-75 hover:text-green-400"
-					/>
-				</label>
-				<input
-					ref={mediaFile}
-					type="file"
-					name="image"
-					accept="image/png, image/jpg, image/gif, image/jpeg"
-					id="media"
-					className="hidden"
-					onChange={handleMediaBox}
-				/>
 				<input
 					type="text"
 					className="outline-none p-2 w-full bg-transparent"

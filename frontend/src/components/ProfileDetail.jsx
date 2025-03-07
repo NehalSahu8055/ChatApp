@@ -17,36 +17,36 @@ const ProfileDetail = () => {
 					Profile
 				</h2>
 				<div className="w-full py-4 justify-evenly flex flex-wrap items-center gap-3">
-					<div className="self-end">
-						<h3 className="text-xl font-semibold p-1">
-							Name : {user.firstName} {user.lastName}
-						</h3>
-						<h3 className="text-xl font-semibold p-1">
-							Email : {user.email}
-						</h3>
-						<button
-							onClick={() => {
-								localStorage.removeItem("token");
-								window.location.reload();
-							}}
-							className="bg-red-500 hover:bg-red-700 text-white font-bold py-1.5 px-4 rounded mt-3 hidden sm:block"
-						>
-							Logout
-						</button>
-					</div>
-					<div className="self-end flex w-full sm:w-fit items-center justify-evenly sm:flex-col">
+					<div className="self-end flex flex-col w-full">
+						<div className="flex justify-between">
+						<div>
+							<h3 className="text-xl font-semibold p-1">
+								Name : {user.firstName} {user.lastName}
+							</h3>
+							<h3 className="text-xl font-semibold p-1">
+								Email : {user.email}
+							</h3>
+						</div>
 						<img
 							src={user.image}
 							alt="user/image"
 							className="w-20 h-20 rounded-md"
 						/>
+						</div>
+						<button
+							onClick={() => {
+								localStorage.removeItem("token");
+								window.location.reload();
+							}}
+							className="bg-red-500 w-fit hover:bg-red-700 text-white font-bold py-1.5 px-4 rounded mt-3 hidden sm:block"
+						>
+							Logout
+						</button>
+					</div>
+					<div className="self-end flex w-full sm:w-fit items-center justify-evenly sm:flex-col">
+						
 						<div className="flex flex-col">
-							<button
-								onClick={handleUpdate}
-								className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-1.5 px-4 rounded sm:mt-3"
-							>
-								Update
-							</button>
+							
 							<button
 								onClick={() => {
 									localStorage.removeItem("token");
